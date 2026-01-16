@@ -4,7 +4,7 @@ const openai = new OpenAI();
 
 const response = await openai.responses.create({
     model: "gpt-5",
-    input: "サンフランシスコの天気は？",
+    input: "Mastraってどういう意味？",
 });
 
 console.log(response);
