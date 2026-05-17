@@ -1,0 +1,16 @@
+### AIエージェント一覧
+GET http://localhost:4111/api/agents
+
+### クエリレビューAIエージェントの呼び出し
+POST http://localhost:4111/api/agents/queryEvaluationAgent/generate
+Content-Type: application/json
+Authorization: Bearer your_api_key_here
+
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "ハリネズミの寿命は？"
+    }
+  ]
+}

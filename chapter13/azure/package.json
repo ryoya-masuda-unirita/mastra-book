@@ -1,0 +1,18 @@
+{
+  "name": "verify-ch13-azure",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "mastra build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/azure": "^3.0.64",
+    "@mastra/core": "^1.32.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "mastra": "^1.8.1",
+    "typescript": "^5.9.3"
+  }
+}

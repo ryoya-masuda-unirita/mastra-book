@@ -1,0 +1,19 @@
+{
+  "name": "verify-chapter5",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mastra/core": "*",
+    "@mastra/rag": "*",
+    "@mastra/libsql": "*",
+    "@mastra/pg": "*",
+    "ai": "*"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "@types/node": "*"
+  }
+}

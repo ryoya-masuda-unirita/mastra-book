@@ -1,0 +1,19 @@
+{
+  "name": "verify-ch13-cloudflare",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "mastra build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mastra/core": "^1.32.1",
+    "@mastra/deployer-cloudflare": "^1.1.32"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "mastra": "^1.8.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.90.0"
+  }
+}

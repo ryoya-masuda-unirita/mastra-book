@@ -1,0 +1,788 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#F5F5F5",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        40,
+        48,
+        36,
+        48
+      ],
+      "justifyContent": "end",
+      "children": [
+        {
+          "type": "frame",
+          "id": "KxZQs",
+          "name": "Welcome Area",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cbwPC",
+              "name": "logoIcon",
+              "width": 56,
+              "height": 56,
+              "fill": "#000000",
+              "cornerRadius": 14,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kLzv5",
+                  "name": "logoText",
+                  "fill": "#FFFFFF",
+                  "content": "R",
+                  "fontFamily": "Instrument Serif",
+                  "fontSize": 28,
+                  "fontWeight": "normal",
+                  "fontStyle": "italic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "GIxXo",
+              "name": "headline",
+              "fill": "#000000",
+              "content": "何をリサーチしましょうか？",
+              "fontFamily": "Instrument Serif",
+              "fontSize": 32,
+              "fontWeight": "normal",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "hqJHE",
+              "name": "subtitle",
+              "fill": "#888888",
+              "content": "トピックを入力するか、下のサジェストから選んでください",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "8BRPC",
+          "name": "Suggestion Chips",
+          "width": "fill_container",
+          "gap": 8,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qYEAo",
+              "name": "chip1",
+              "fill": "#FFFFFF",
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E0E0E0"
+              },
+              "gap": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "BKv5j",
+                  "name": "chip1icon",
+                  "width": 13,
+                  "height": 13,
+                  "iconFontName": "sparkles",
+                  "iconFontFamily": "lucide",
+                  "fill": "#888888"
+                },
+                {
+                  "type": "text",
+                  "id": "9vzq3",
+                  "name": "chip1text",
+                  "fill": "#333333",
+                  "content": "2026年のAI技術トレンド",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dNC79",
+              "name": "chip2",
+              "fill": "#FFFFFF",
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E0E0E0"
+              },
+              "gap": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "FVIdq",
+                  "name": "chip2icon",
+                  "width": 13,
+                  "height": 13,
+                  "iconFontName": "atom",
+                  "iconFontFamily": "lucide",
+                  "fill": "#888888"
+                },
+                {
+                  "type": "text",
+                  "id": "H98Sq",
+                  "name": "chip2text",
+                  "fill": "#333333",
+                  "content": "量子コンピューティング",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "itDoa",
+              "name": "chip3",
+              "fill": "#FFFFFF",
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E0E0E0"
+              },
+              "gap": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "ptRFb",
+                  "name": "chip3icon",
+                  "width": 13,
+                  "height": 13,
+                  "iconFontName": "leaf",
+                  "iconFontFamily": "lucide",
+                  "fill": "#888888"
+                },
+                {
+                  "type": "text",
+                  "id": "YwZ11",
+                  "name": "chip3text",
+                  "fill": "#333333",
+                  "content": "持続可能エネルギー",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bYjls",
+              "name": "chip4",
+              "fill": "#FFFFFF",
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E0E0E0"
+              },
+              "gap": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "hmNEz",
+                  "name": "chip4icon",
+                  "width": 13,
+                  "height": 13,
+                  "iconFontName": "globe",
+                  "iconFontFamily": "lucide",
+                  "fill": "#888888"
+                },
+                {
+                  "type": "text",
+                  "id": "zMPbw",
+                  "name": "chip4text",
+                  "fill": "#333333",
+                  "content": "Web3とブロックチェーン",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OWgZN",
+          "name": "Input Area",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E0E0E0"
+          },
+          "gap": 12,
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "9Qgic",
+              "name": "inputIcon",
+              "width": 18,
+              "height": 18,
+              "iconFontName": "search",
+              "iconFontFamily": "lucide",
+              "fill": "#AAAAAA"
+            },
+            {
+              "type": "text",
+              "id": "kFbAL",
+              "name": "inputText",
+              "fill": "#AAAAAA",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "リサーチしたいトピックを入力してください...",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "HIWOv",
+              "name": "sendBtnFrame",
+              "width": 36,
+              "height": 36,
+              "fill": "#000000",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "BJhIv",
+                  "name": "sendIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "arrow-up",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "bcpFP",
+          "name": "footer",
+          "fill": "#AAAAAA",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "AIが生成する情報には誤りが含まれる場合があります。重要な情報は必ずご確認ください。",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "IYvaw",
+      "x": 900,
+      "y": 0,
+      "name": "Search In Progress",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#F5F5F5",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        40,
+        48,
+        36,
+        48
+      ],
+      "justifyContent": "end",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Wul2Z",
+          "name": "Content Area",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "np3Tm",
+              "name": "Top Bar",
+              "width": "fill_container",
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KabyT",
+                  "name": "Topic Badge",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E0E0E0"
+                  },
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ob1ni",
+                      "name": "topicText",
+                      "fill": "#333333",
+                      "content": "ハリネズミの寿命",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CBAkI",
+              "name": "Status Area",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kHiXg",
+                  "name": "Status Label",
+                  "fill": "#F0F0F0",
+                  "cornerRadius": 6,
+                  "gap": 6,
+                  "padding": [
+                    6,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "79wO5",
+                      "name": "statusText",
+                      "fill": "#666666",
+                      "content": "実行中",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NGfUD",
+                  "name": "Workflow Step 1",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#E0E0E0"
+                  },
+                  "gap": 10,
+                  "padding": [
+                    10,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "9Bpvu",
+                      "name": "wf1icon",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "wrench",
+                      "iconFontFamily": "lucide",
+                      "fill": "#888888"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rkpNR",
+                      "name": "wf1text",
+                      "fill": "#333333",
+                      "content": "research-workflow",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "36fUK",
+                      "name": "Running Badge",
+                      "fill": "#F5F5F5",
+                      "cornerRadius": 10,
+                      "gap": 5,
+                      "padding": [
+                        3,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "2q0xq",
+                          "name": "wf1dot",
+                          "fill": "#AAAAAA",
+                          "width": 8,
+                          "height": 8,
+                          "stroke": {
+                            "thickness": 1.5,
+                            "fill": "#AAAAAA"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "JQJcE",
+                          "name": "wf1stxt",
+                          "fill": "#888888",
+                          "content": "Running",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "yX3z7",
+                      "name": "wf1arrow",
+                      "width": 14,
+                      "height": 14,
+                      "iconFontName": "chevron-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "#AAAAAA"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FPqEb",
+                  "name": "Sub Steps",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    0,
+                    0,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sJnHD",
+                      "name": "Step Get User Query",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E0E0E0"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "aCx1q",
+                          "name": "step2icon",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "wrench",
+                          "iconFontFamily": "lucide",
+                          "fill": "#888888"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qGfh6",
+                          "name": "step2text",
+                          "fill": "#333333",
+                          "content": "research-workflow.get-user-query",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FamTW",
+                          "name": "Completed Badge",
+                          "fill": "#F0FFF0",
+                          "cornerRadius": 10,
+                          "gap": 5,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "tMIrQ",
+                              "name": "step2check",
+                              "width": 12,
+                              "height": 12,
+                              "iconFontName": "circle-check",
+                              "iconFontFamily": "lucide",
+                              "fill": "#22C55E"
+                            },
+                            {
+                              "type": "text",
+                              "id": "VegzP",
+                              "name": "step2stxt",
+                              "fill": "#22C55E",
+                              "content": "Completed",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "bvM1x",
+                          "name": "step2arrow",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "chevron-down",
+                          "iconFontFamily": "lucide",
+                          "fill": "#AAAAAA"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fOK34",
+                      "name": "Step Research",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E0E0E0"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "21ETB",
+                          "name": "step3icon",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "wrench",
+                          "iconFontFamily": "lucide",
+                          "fill": "#888888"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HnCTr",
+                          "name": "step3text",
+                          "fill": "#333333",
+                          "content": "research-workflow.research",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bGeSR",
+                          "name": "Running Badge",
+                          "fill": "#F5F5F5",
+                          "cornerRadius": 10,
+                          "gap": 5,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "0w6rP",
+                              "name": "step3dot",
+                              "fill": "#AAAAAA",
+                              "width": 8,
+                              "height": 8,
+                              "stroke": {
+                                "thickness": 1.5,
+                                "fill": "#AAAAAA"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "id": "sgnOf",
+                              "name": "step3stxt",
+                              "fill": "#888888",
+                              "content": "Running",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "46B7Z",
+                          "name": "step3arrow",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "chevron-down",
+                          "iconFontFamily": "lucide",
+                          "fill": "#AAAAAA"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "VL8by",
+          "name": "Input Area",
+          "width": "fill_container",
+          "height": 56,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E0E0E0"
+          },
+          "gap": 12,
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "nkQK6",
+              "name": "inputIcon",
+              "width": 18,
+              "height": 18,
+              "iconFontName": "search",
+              "iconFontFamily": "lucide",
+              "fill": "#AAAAAA"
+            },
+            {
+              "type": "text",
+              "id": "sFvRf",
+              "name": "inputText",
+              "fill": "#AAAAAA",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "リサーチしたいトピックを入力してください...",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "Hxtmw",
+              "name": "sendBtnFrame",
+              "width": 36,
+              "height": 36,
+              "fill": "#000000",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "CNO05",
+                  "name": "sendIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "arrow-up",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Zoylm",
+          "name": "footer",
+          "fill": "#AAAAAA",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "AIが生成する情報には誤りが含まれる場合があります。重要な情報は必ずご確認ください。",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    }
+  ]
+}

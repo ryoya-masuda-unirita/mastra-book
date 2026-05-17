@@ -1,0 +1,24 @@
+{
+  "name": "verify-chapter4",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "*",
+    "@ai-sdk/google": "*",
+    "@ai-sdk/react": "*",
+    "@mastra/ai-sdk": "*",
+    "@mastra/core": "*",
+    "ai": "*",
+    "dotenv": "*",
+    "react": "*",
+    "zod": "*"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "@types/node": "*",
+    "@types/react": "*"
+  }
+}

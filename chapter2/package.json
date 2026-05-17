@@ -1,0 +1,17 @@
+{
+  "name": "verify-chapter2",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mastra/core": "*",
+    "@ai-sdk/amazon-bedrock": "*",
+    "zod": "*"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "@types/node": "*"
+  }
+}
