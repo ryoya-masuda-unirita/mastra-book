@@ -15,11 +15,13 @@
 | 第5章 シンプルなRAGエージェントの構築 | `chapter5/` | Mastraプロジェクト | RAGエージェントの最小実装 |
 | 第6章 Deep Researchアプリの構築（ワークフロー編） | `chapter6/hitl-research/` | Mastraプロジェクト | Deep Researchワークフロー |
 | 第7章 Deep Researchアプリの構築（API/フロントエンド編） | `chapter7/hitl-research-react/` | Next.js + Mastra | フロント込みのDeep Research |
-| 第8〜12章 フルスタックアプリの実装シリーズ | `chapter8-12/` | 節構成のみ整備中 | 同一アプリ（`image-ai-service`）を5章で段階発展。方針調整中 |
+| 第8章 画像生成アプリを作って学ぶアプリ基盤 | `chapter8/image-ai-service/` | Next.js + Mastra | 第8章末スナップショット（認証・プラン管理まで） |
+| 第9章 画像生成アプリを作って学ぶガードレールとAgent Skills | `chapter9/image-ai-service/` | Next.js + Mastra | 第9章末スナップショット（ガードレール・画像生成・Agent Skills追加） |
+| 第10〜12章 フルスタックアプリの実装シリーズ | `chapter8-12/` | Next.js + Mastra | 同一アプリ（`image-ai-service`）を発展。第12章末の完成形を配置 |
 | 第13章 様々なクラウド環境へのデプロイ | `chapter13/` | デプロイ別プロジェクト | Cloudflare / Cloud Run / AgentCore 別 |
 | 付録 | （なし） | — | コード掲載なし |
 
-> **第8〜12章**は同一のフルスタックアプリ（書籍では画像生成アプリを題材にしたNext.js + Mastraアプリ）を章を追って発展させる構成のため、`chapter8-12/` という1ディレクトリにまとめて管理しています。現状、`chapter8-12/README.md` に5章分の節構成と該当コードブロックの対応表のみ整備しています。実コードの配置方針（章別ブランチ運用 / 章末スナップショット配置 / 第12章のみ完成形配置）は、リードオーサーの上田さんと方針調整が必要です。
+> **第8〜12章**は同一のフルスタックアプリ（書籍では画像生成アプリを題材にしたNext.js + Mastraアプリ）を章を追って発展させる構成です。第8章末・第9章末の状態は、それぞれ `chapter8/image-ai-service/`・`chapter9/image-ai-service/` に独立したプロジェクト（章末スナップショット）として配置しています。第10〜12章はコマンドを各章READMEに記載し、第12章末の完成形プロジェクトを `chapter8-12/image-ai-service/` に配置しています。
 
 ## 共通の動作環境
 
@@ -78,11 +80,14 @@ Claude Code 利用者は `/verify-reader-handson` スキルで、Mastra や Next
 | chapter5 | ✅ 整備済み（snippets/ 8本 + README）| 原稿のコードブロックから抽出 |
 | chapter6 | ✅ 整備済み（hitl-research/ プロジェクト一式）| 既存（リードオーサー上田さんが投入済み）|
 | chapter7 | ✅ 整備済み（hitl-research-react/ プロジェクト一式）| 既存（同上）|
-| chapter8-12 | 🔄 README のみ整備（5章分を1ディレクトリに統合）、実コード方針調整中 | 上田さんとの相談待ち |
+| chapter8 | ✅ 整備済み（image-ai-service/ プロジェクト一式・第8章末スナップショット）| 第12章末完成形から後続章の機能を除去して再構成 |
+| chapter9 | ✅ 整備済み（image-ai-service/ プロジェクト一式・第9章末スナップショット）| 同上 |
+| chapter8-12 | ✅ 整備済み（image-ai-service/ プロジェクト一式・第12章末完成形）| 既存 |
 | chapter13 | ✅ 整備済み（agentcore/, cloudflare/, cloudrun/ 各最小構成 + README）| `workspace/verify-chapter13` から移植 |
 
 ### TODO
 
-- [ ] 第8〜12章の実コード配置方針を上田さんと相談（案A=章別ブランチ運用 / 案B=章末スナップショット配置 / 案C=第12章のみ完成形配置）
+- [x] 第8〜12章の実コード配置方針（案B=章末スナップショット配置を採用）：第8章末・第9章末を `chapter8/`・`chapter9/` に独立配置、第12章末完成形を `chapter8-12/` に配置
+- [ ] 第10〜12章の章末スナップショット（`chapter10/`・`chapter11/`）も同様に独立配置するか検討
 - [ ] 各章 `package.json` の依存関係バージョンを `*` から執筆時点の最新の安定版に固定（書籍出版時）
 - [ ] 公開リポジトリへの移植スクリプト整備
