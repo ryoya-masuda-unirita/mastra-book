@@ -2,8 +2,6 @@
 
 書籍「MastraによるAIエージェント開発/運用［実践入門］」第8章を読み終えた時点の `image-ai-service` プロジェクトです。第8章で構築する **アプリ基盤**（Next.js + Mastra + Better Auth + プラン管理）の状態になっています。
 
-画像生成ツール・ガードレール・Agent Skills（第9章）、メモリ／スレッド機能（第10章）、Langfuseトレーシング／Mastra Evals（第11章）、Turso／Vercel Blob対応（第12章）は **含みません**。第9章末の状態は [`../../chapter9/image-ai-service/`](../../chapter9/image-ai-service)、第12章末の完成形は [`../../chapter8-12/image-ai-service/`](../../chapter8-12/image-ai-service) を参照してください。
-
 ## このサンプルでできること
 
 - Mastra エージェントによるストリーミングチャット応答（第8章 8.4〜8.5節）
@@ -113,4 +111,3 @@ npm run build
 ## 注意
 
 - ローカルでは `auth.db` / `mastra.db` が自動生成されます。クリーンに始めたい場合は削除してから手順1から再実行してください。
-- 第9章以降の機能（画像生成・ガードレール・Agent Skills・メモリ・評価・クラウドデプロイ）は本サンプルには含まれていません。

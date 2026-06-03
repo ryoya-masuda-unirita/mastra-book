@@ -1,8 +1,8 @@
 # 第9章 画像生成アプリを作って学ぶガードレールとAgent Skills
 
-この章のハンズオンが実施しやすいように、書籍に掲載されている操作を確認しやすい形でまとめています。第9章末の状態のプロジェクト一式は [`image-ai-service/`](./image-ai-service) に配置しています。第8章末の状態は [`../chapter8/image-ai-service/`](../chapter8/image-ai-service)、第12章末の完成形は [`../chapter8-12/image-ai-service/`](../chapter8-12/image-ai-service) を参照してください。
+この章のハンズオンが実施しやすいように、書籍に掲載されている操作を確認しやすい形でまとめています。完成状態のプロジェクト一式は [`image-ai-service/`](./image-ai-service) に配置しています。
 
-第9章では新しいインストール系コマンドはありません。第8章で作成した `image-ai-service` に、次の機能を追加します。
+第9章では新しいインストール系コマンドはありません。既存の `image-ai-service` に、次の機能を追加します。
 
 | 節 | 追加する内容 |
 |---|---|
@@ -17,3 +17,7 @@ npm run dev
 ```
 
 ブラウザで `http://localhost:3000/chat` を開き、画像生成を依頼します。
+
+## GitHub Codespaces で動かす場合
+
+Codespaces では転送URLでのアクセスや、Better Auth・Next.js Server Action のオリジン設定が必要です。詳細は [`image-ai-service/README.md` の「GitHub Codespaces で動かす場合」](./image-ai-service/README.md#github-codespaces-で動かす場合) を参照してください。
