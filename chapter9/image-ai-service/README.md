@@ -75,6 +75,36 @@ npm run dev
 
 ブラウザで `http://localhost:3000/chat` にアクセスしてアカウントを作成し、「黒板にハリネズミを描いて」のようなリクエストを送ると、エージェントが Agent Skills を参照して英語プロンプトを組み立て、画像が `public/generated-images/` に保存されてチャットに表示されます。
 
+## GitHub Codespaces で動かす場合
+
+ローカルではなく GitHub Codespaces 上で動かす場合、ブラウザは転送URL（`https://<codespace名>-3000.app.github.dev`）でアクセスします。上記のローカル手順に加えて次の対応が必要です。
+
+1. **転送URLを確認**（`npm run dev` 後に PORTS タブの 3000 番からも確認できます）
+
+   ```bash
+   echo "https://${CODESPACE_NAME}-3000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+   ```
+
+2. **`.env` の URL を転送URLに変更**（`localhost` のままだと認証・プラン切替が失敗します）
+
+   ```
+   NEXT_PUBLIC_APP_URL=https://<codespace名>-3000.app.github.dev
+   BETTER_AUTH_URL=https://<codespace名>-3000.app.github.dev
+   ```
+
+   変更後は `npm run dev` を再起動してください（`NEXT_PUBLIC_APP_URL` はビルド時に焼き込まれるため）。
+
+3. **リバースプロキシ向けのCSRF設定（本サンプルは設定済み）**
+
+   Codespaces のようなリバースプロキシ下では、転送先ホスト（`x-forwarded-host`）とリクエストの origin が食い違い、CSRF チェックで次のように弾かれます。本サンプルはどちらも対応済みです（第8章で設定済みのものを引き継いでいます）。
+
+   | 症状 | 原因 | 対応（設定済み） |
+   |---|---|---|
+   | サインイン/サインアップが `403 Invalid origin` | Better Auth のオリジンチェック | `src/lib/auth.ts` の `trustedOrigins` に `https://*.app.github.dev` を追加 |
+   | プラン切替が `500 Invalid Server Actions request` | Next.js Server Action の CSRF チェック | `next.config.ts` の `experimental.serverActions.allowedOrigins` に `*.app.github.dev` を追加 |
+
+4. **ポートを開く**：PORTS タブで 3000 番の転送URLを開きます（開けない場合は Visibility を Public に変更）。
+
 ## ビルド検証
 
 ```bash
