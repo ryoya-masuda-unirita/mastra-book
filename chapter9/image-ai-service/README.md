@@ -23,8 +23,9 @@
 
 ### 1. 依存関係のインストール
 
+このサンプル（`image-ai-service/`）のディレクトリで実行します。
+
 ```bash
-cd samples/chapter9/image-ai-service
 npm install --legacy-peer-deps
 ```
 
