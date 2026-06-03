@@ -2,6 +2,10 @@
 
 この章のハンズオンが実施しやすいように、書籍に掲載されているコマンドをコピペしやすい形で掲載しています。完成状態のプロジェクト一式は [`image-ai-service/`](./image-ai-service) に配置しています。
 
+## GitHub Codespaces で動かす場合
+
+Codespaces では転送URLでのアクセスや、Better Auth・Next.js Server Action のオリジン設定が必要です。詳細は [`image-ai-service/README.md` の「GitHub Codespaces で動かす場合」](./image-ai-service/README.md#github-codespaces-で動かす場合) を参照してください。
+
 ## 8.3 ハンズオンの準備
 
 ### Next.jsプロジェクトの初期化
@@ -79,6 +83,3 @@ npm run dev
 
 ブラウザで `http://localhost:3000/chat` を開きます。
 
-## GitHub Codespaces で動かす場合
-
-Codespaces では転送URLでのアクセスや、Better Auth・Next.js Server Action のオリジン設定が必要です。詳細は [`image-ai-service/README.md` の「GitHub Codespaces で動かす場合」](./image-ai-service/README.md#github-codespaces-で動かす場合) を参照してください。
