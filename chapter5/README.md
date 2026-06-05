@@ -36,7 +36,7 @@ npm run typecheck   # tsc --noEmit
 
 スニペットは型チェック用にエクスポート関数の形でまとめています。実際にエージェントを動かしたい場合は、書籍 5.2節の手順で別途プロジェクトを作成し、以下を準備してください。
 
-- `.env` に `GOOGLE_GENERATIVE_AI_API_KEY` を設定（書籍ではGoogle Geminiを使用）
+- `.env` に `GOOGLE_API_KEY` を設定（書籍ではGoogle Geminiを使用）
 - `src/documents/` に `company_faq.md` / `operations_manual.md` / `onboarding_guide.md` を配置
 - ベクトルDBは LibSQL（ローカルファイル `vector.db`）を使用するため、外部サービスやDockerは不要
 
@@ -87,7 +87,7 @@ npm install @mastra/rag@2.2.1 @mastra/libsql@1.9.0 ai@6.0.168
 ### 5.2 `.env` ファイル
 
 ```
-GOOGLE_GENERATIVE_AI_API_KEY=xxxxxxxxxxxxxxxx
+GOOGLE_API_KEY=xxxxxxxxxxxxxxxx
 ```
 
 ### 5.5 データ準備スクリプトの実行
