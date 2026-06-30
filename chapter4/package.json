@@ -6,19 +6,19 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "*",
-    "@ai-sdk/google": "*",
-    "@ai-sdk/react": "*",
-    "@mastra/ai-sdk": "*",
-    "@mastra/core": "*",
-    "ai": "*",
-    "dotenv": "*",
-    "react": "*",
-    "zod": "*"
+    "@ai-sdk/anthropic": "^3.0.81",
+    "@ai-sdk/google": "^3.0.80",
+    "@ai-sdk/react": "^3.0.199",
+    "@mastra/ai-sdk": "^1.4.4",
+    "@mastra/core": "^1.41.0",
+    "ai": "^6.0.197",
+    "dotenv": "^17.4.2",
+    "react": "^19.2.7",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "typescript": "*",
-    "@types/node": "*",
-    "@types/react": "*"
+    "typescript": "^6.0.3",
+    "@types/node": "^24.13.1",
+    "@types/react": "^19.2.17"
   }
 }

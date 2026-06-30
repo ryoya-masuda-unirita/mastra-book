@@ -7,7 +7,7 @@ const researchAgent = new Agent({
   id: "research-agent",
   name: "Research Agent",
   description: "事実調査に特化し、箇条書きで結果を返す",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
   instructions: "事実を調査し、箇条書きで報告してください。",
 });
 
@@ -15,7 +15,7 @@ const writingAgent = new Agent({
   id: "writing-agent",
   name: "Writing Agent",
   description: "調査結果をレポート形式の文章に変換する",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
   instructions: "素材を読みやすいレポートにまとめてください。",
 });
 
@@ -24,7 +24,7 @@ const supervisor = new Agent({
   id: "supervisor",
   name: "Supervisor",
   instructions: "ユーザーの依頼を解釈し、適切なエージェントに委任してください。",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
   agents: { researchAgent, writingAgent },
 });
 
@@ -40,9 +40,9 @@ async function callA2A() {
   });
   const a2a = client.getA2A("research-agent");
 
-  const card = await a2a.getCard();
+  const card = await a2a.getAgentCard();
 
-  const result = await a2a.sendMessage({
+  const stream = a2a.sendMessageStream({
     message: {
       kind: "message",
       messageId: crypto.randomUUID(),
@@ -56,7 +56,11 @@ async function callA2A() {
     },
   });
 
-  return { card, result };
+  for await (const event of stream) {
+    console.log(event);
+  }
+
+  return { card };
 }
 
 export { runSupervisor, callA2A };

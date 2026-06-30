@@ -24,7 +24,7 @@ export const imageGenerationTool = createTool({
   }),
   execute: async (inputData, context) => {
     try {
-      // RuntimeContextからプランを取得（未設定時は"free"）
+      // RequestContextからプランを取得（未設定時は"free"）
       const plan =
         (context?.requestContext?.get("plan") as Plan | undefined) ?? "free";
       const imageModel = PLAN_IMAGE_MODELS[plan];
@@ -95,12 +95,14 @@ export const imageGenerationTool = createTool({
       }
 
       // 生成した画像をLangfuseのトレースに記録
+      // GENERIC を指定することで mastra.generic.output 属性に保存され、
+      // Langfuse 側で langfuse.observation.output にマップされて
+      // MediaService が base64 data URI を検出・Media に変換する
       context.tracingContext?.currentSpan?.createEventSpan({
-        type: SpanType.TOOL_CALL,
+        type: SpanType.GENERIC,
         name: "image-generation-result",
         output: {
-          base64,
-          imageUrl: `data:image/png;base64,${base64}`,
+          image: `data:image/png;base64,${base64}`,
         },
       });
 
@@ -115,10 +117,19 @@ export const imageGenerationTool = createTool({
         }
         parentSpan = parentSpan.parent;
       }
+      type UserMessage = {
+        role?: string;
+        parts?: Array<{ type?: string; text?: string }>;
+      };
       const userInputPrompt = Array.isArray(rootSpanInput)
-        ? (rootSpanInput as Array<Record<string, unknown>>)
+        ? (rootSpanInput as UserMessage[])
             .filter((m) => m.role === "user")
-            .map((m) => (typeof m.content === "string" ? m.content : ""))
+            .map((m) =>
+              (m.parts ?? [])
+                .filter((p) => p.type === "text")
+                .map((p) => p.text ?? "")
+                .join(""),
+            )
             .at(-1)
         : undefined;
 

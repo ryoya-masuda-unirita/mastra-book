@@ -6,12 +6,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mastra/core": "*",
-    "@ai-sdk/amazon-bedrock": "*",
-    "zod": "*"
+    "@mastra/core": "^1.41.0",
+    "@ai-sdk/amazon-bedrock": "^4.0.113",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "typescript": "*",
-    "@types/node": "*"
+    "typescript": "^6.0.3",
+    "@types/node": "^24.13.1"
   }
 }

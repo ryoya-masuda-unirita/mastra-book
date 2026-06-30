@@ -1,5 +1,5 @@
-// 第5章 5.4 エージェントからRAGを検索 - 原稿 L416-442
-// chapter4/rag-agent/src/mastra/agents/rag-agent.ts
+// 第5章 5.5 検索ツールの組み込みとエージェントの実行
+// chapter5/rag-agent/src/mastra/agents/rag-agent.ts
 import { Agent } from "@mastra/core/agent";
 import { createVectorQueryTool } from "@mastra/rag";
 import { ModelRouterEmbeddingModel } from "@mastra/core/llm";
@@ -22,6 +22,6 @@ export const ragAgent = new Agent({
 検索結果に含まれる情報のみに基づいて回答し、情報が見つからない場合はその旨を正直に伝えてください。
 回答の根拠となったドキュメントのソース情報も可能な限り含めてください。
 ${LIBSQL_PROMPT}`,
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
   tools: { ragTool },
 });

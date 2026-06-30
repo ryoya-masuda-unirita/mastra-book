@@ -24,5 +24,5 @@ export const evaluationAgent = new Agent({
     "reason": "決定の簡潔な説明"
   }
   `,
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
 });

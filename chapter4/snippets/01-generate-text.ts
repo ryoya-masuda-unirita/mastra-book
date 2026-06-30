@@ -11,7 +11,7 @@ const google = createGoogleGenerativeAI({
 // Geminiを使ってテキスト回答を一括で生成
 async function runGenerateText() {
   const { text } = await generateText({
-    model: google("gemini-3-flash-preview"),
+    model: google("gemini-3.5-flash"),
     prompt: "AI SDKとは何ですか？",
   });
   console.log(await text);

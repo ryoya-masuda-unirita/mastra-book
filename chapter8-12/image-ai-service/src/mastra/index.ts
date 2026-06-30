@@ -1,13 +1,17 @@
 import { Mastra } from "@mastra/core/mastra";
 import { LibSQLStore } from "@mastra/libsql";
 import {
-  DefaultExporter,
+  MastraStorageExporter,
   Observability,
   SamplingStrategyType,
 } from "@mastra/observability";
 import { LangfuseExporter } from "@mastra/langfuse";
 
 import { imageSupportAgent } from "./agents/image-support-agent";
+
+const langfuseEnabled = Boolean(
+  process.env.LANGFUSE_PUBLIC_KEY && process.env.LANGFUSE_SECRET_KEY,
+);
 
 export const mastra = new Mastra({
   agents: { "image-support-agent": imageSupportAgent },
@@ -23,7 +27,7 @@ export const mastra = new Mastra({
       // Mastra Studioでトレースをローカル確認するためのデフォルトエクスポーター
       default: {
         serviceName: "image-ai-service",
-        exporters: [new DefaultExporter()],
+        exporters: [new MastraStorageExporter()],
       },
       langfuse: {
         serviceName: "image-ai-service",
@@ -48,5 +52,7 @@ export const mastra = new Mastra({
         },
       },
     },
+    // Langfuseのキーがある本番環境ではLangfuse、ローカルではStudio用のdefaultを使う
+    configSelector: () => (langfuseEnabled ? "langfuse" : "default"),
   }),
 });

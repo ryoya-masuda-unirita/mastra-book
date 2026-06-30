@@ -17,7 +17,7 @@ const getAccountInfoTool = tool({
 });
 
 const supportAgent = new ToolLoopAgent({
-  model: google("gemini-3-flash-preview"),
+  model: google("gemini-3.5-flash"),
   callOptionsSchema: z.object({
     userId: z.string(),
     accountType: z.enum(["free", "pro", "enterprise"]),

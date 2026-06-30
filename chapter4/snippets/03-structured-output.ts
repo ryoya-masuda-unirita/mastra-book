@@ -8,7 +8,7 @@ import { google } from "./01-generate-text.js";
 // L97-119: 単純な構造化出力（generateText + Output.object）
 async function runStructuredObject() {
   const { output } = await generateText({
-    model: google("gemini-3-flash-preview"),
+    model: google("gemini-3.5-flash"),
     output: Output.object({
       schema: z.object({
         recipe: z.object({
@@ -30,7 +30,7 @@ async function runStructuredObject() {
 async function runStructuredArrayStream() {
   // 構造化ストリーム出力の例
   const { partialOutputStream } = streamText({
-    model: google("gemini-3-flash-preview"),
+    model: google("gemini-3.5-flash"),
     output: Output.array({
       element: z.object({
         location: z.string(),
@@ -66,7 +66,7 @@ declare function updateUI(partial: unknown): void;
 
 async function runStreamingRecipe() {
   const { partialOutputStream } = streamText({
-    model: google("gemini-3-flash-preview"),
+    model: google("gemini-3.5-flash"),
     output: Output.object({ schema: recipeSchema }),
     prompt: "カルボナーラのレシピを教えてください",
   });

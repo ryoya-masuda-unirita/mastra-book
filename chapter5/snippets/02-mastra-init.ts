@@ -1,5 +1,5 @@
-// 第5章 5.2 ハンズオンの準備 - 原稿 L259-277
-// chapter4/rag-agent/src/mastra/index.ts (初期版)
+// 第5章 5.3 ハンズオンの準備
+// chapter5/rag-agent/src/mastra/index.ts (初期版)
 import { Mastra } from "@mastra/core";
 import { LibSQLVector } from "@mastra/libsql";
 import path from "path";

@@ -1,0 +1,7 @@
+.git
+node_modules/
+.mastra/.build/
+.mastra/output/
+.env
+.env.local
+*.log

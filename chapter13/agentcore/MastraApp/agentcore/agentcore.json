@@ -11,18 +11,9 @@
     {
       "name": "MastraAgent",
       "build": "Container",
-      "entrypoint": "main.py",
+      "entrypoint": "main.js",
       "codeLocation": "app/MastraAgent/",
-      "runtimeVersion": "PYTHON_3_14",
-      "networkMode": "PUBLIC",
-      "protocol": "HTTP"
-    },
-    {
-      "name": "MastraAgentOtel",
-      "build": "Container",
-      "entrypoint": "main.py",
-      "codeLocation": "app/MastraAgentOtel/",
-      "runtimeVersion": "PYTHON_3_14",
+      "runtimeVersion": "NODE_22",
       "networkMode": "PUBLIC",
       "protocol": "HTTP"
     }
@@ -35,5 +26,7 @@
   "policyEngines": [],
   "configBundles": [],
   "abTests": [],
-  "httpGateways": []
+  "httpGateways": [],
+  "harnesses": [],
+  "datasets": []
 }

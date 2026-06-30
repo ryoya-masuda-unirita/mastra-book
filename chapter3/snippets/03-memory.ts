@@ -15,7 +15,7 @@ const agent = new Agent({
   id: "demo",
   name: "Demo",
   instructions: "demo",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
   memory,
 });
 

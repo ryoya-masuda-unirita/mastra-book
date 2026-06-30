@@ -3,7 +3,7 @@
     "target": "ES2022",
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "ignoreDeprecations": "5.0",
+    "ignoreDeprecations": "6.0",
     "lib": ["es2022"],
     "declaration": true,
     "strict": true,
@@ -20,6 +20,7 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": true,
     "skipLibCheck": true,
+    "types": ["node", "jest"],
     "typeRoots": ["./node_modules/@types"],
     "rootDir": ".",
     "outDir": "dist"

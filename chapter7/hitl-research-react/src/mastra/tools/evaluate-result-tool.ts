@@ -55,7 +55,7 @@ export const evaluateResultTool = createTool({
       );
 
       return response.object;
-    } catch (error) {
+    } catch {
       return {
         isRelevant: false,
         reason: "評価中にエラーが発生しました",

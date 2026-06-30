@@ -21,5 +21,5 @@ export const learningExtractionAgent = new Agent({
     "learning": "コンテンツから得られた重要な洞察（文字列）",
     "followUpQuestions": ["フォローアップ質問（最大1つ）"]
   }`,
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
 });

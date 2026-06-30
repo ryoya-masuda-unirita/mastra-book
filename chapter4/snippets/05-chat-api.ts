@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
   // AI SDKのstreamTextでストリーミングレスポンスを生成
   const result = streamText({
-    model: google("gemini-3-flash-preview"),
+    model: google("gemini-3.5-flash"),
     system: "You are a helpful assistant.",
     messages: await convertToModelMessages(messages),
   });

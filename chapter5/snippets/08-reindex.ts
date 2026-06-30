@@ -1,4 +1,4 @@
-// 第5章 5.5 ドキュメント更新時の再取り込み - 原稿 L644-668
+// 第5章 5.6 ドキュメント更新時の再取り込み
 import { mastra } from "./06-mastra-with-agent.js";
 
 // 補完: 型チェック用に newEmbeddings / newChunks を宣言だけしておく
@@ -31,7 +31,7 @@ async function reindexCompanyFaq() {
   });
 }
 
-// 原稿 L668: 全ベクトル削除（インデックス全体の再構築）
+// 全ベクトル削除（インデックス全体の再構築）
 async function truncateAll() {
   const vectorStore = mastra.getVector("libSqlVector");
   await vectorStore.truncateIndex({ indexName: "company_docs" });

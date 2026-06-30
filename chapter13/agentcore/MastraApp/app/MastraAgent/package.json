@@ -2,25 +2,25 @@
   "name": "mastra-agent",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/agent.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/agent.js",
-    "dev": "npx tsx --watch agent.ts"
+    "start": "node dist/main.js",
+    "dev": "npx tsx --watch main.ts"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "dependencies": {
-    "@ai-sdk/amazon-bedrock": "^4.0.104",
-    "@aws-sdk/credential-providers": "^3.1045.0",
-    "@mastra/core": "^1.32.1",
-    "bedrock-agentcore": "^0.2.3",
-    "zod": "^4.4.3"
+    "@ai-sdk/amazon-bedrock": "4.0.113",
+    "@aws-sdk/credential-providers": "3.1063.0",
+    "@mastra/core": "1.41.0",
+    "bedrock-agentcore": "0.2.4",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "tsx": "^4.0.0",
-    "typescript": "^5.5.0"
+    "@types/node": "22.19.20",
+    "tsx": "4.22.4",
+    "typescript": "6.0.3"
   }
 }

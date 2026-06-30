@@ -6,14 +6,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mastra/core": "*",
-    "@mastra/rag": "*",
-    "@mastra/libsql": "*",
-    "@mastra/pg": "*",
-    "ai": "*"
+    "@mastra/core": "^1.41.0",
+    "@mastra/rag": "^2.2.1",
+    "@mastra/libsql": "^1.12.1",
+    "@mastra/pg": "^1.12.1",
+    "ai": "^6.0.197"
   },
   "devDependencies": {
-    "typescript": "*",
-    "@types/node": "*"
+    "typescript": "^6.0.3",
+    "@types/node": "^24.13.1"
   }
 }

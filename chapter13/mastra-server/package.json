@@ -8,11 +8,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mastra/core": "^1.32.1"
+    "@mastra/core": "1.41.0"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "mastra": "^1.8.1",
-    "typescript": "^5.9.3"
+    "@types/node": "22.19.20",
+    "mastra": "1.12.2",
+    "typescript": "6.0.3"
   }
 }

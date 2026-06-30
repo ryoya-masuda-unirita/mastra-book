@@ -1,5 +1,5 @@
-// 第5章 5.4 エージェントからRAGを検索 - 原稿 L475-493
-// chapter4/rag-agent/src/mastra/index.ts (エージェント登録版)
+// 第5章 5.5 検索ツールの組み込みとエージェントの実行
+// chapter5/rag-agent/src/mastra/index.ts (エージェント登録版)
 import { Mastra } from "@mastra/core";
 import { LibSQLVector } from "@mastra/libsql";
 import path from "path";

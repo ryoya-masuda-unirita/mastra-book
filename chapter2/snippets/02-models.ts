@@ -7,7 +7,7 @@ const agent = new Agent({
   id: "my-agent",
   name: "My Agent",
   instructions: "あなたは親切なアシスタントです。",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
 });
 
 // L200-212: AI SDKプロバイダーによるモデル指定（Bedrock）
@@ -26,7 +26,7 @@ const summarizer = new Agent({
   id: "summarizer",
   name: "Summarizer",
   instructions: "文書を簡潔に要約してください。",
-  model: "google/gemini-3-flash-lite",
+  model: "google/gemini-3.1-flash-lite",
 });
 
 // 高度な推論用（高性能モデル）
@@ -34,7 +34,7 @@ const analyst = new Agent({
   id: "analyst",
   name: "Analyst",
   instructions: "データを分析し、洞察を提供してください。",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
 });
 
 // L246-266: フォールバック配列
@@ -52,7 +52,7 @@ const resilientAgent = new Agent({
       maxRetries: 2,
     },
     {
-      model: "groq/llama-4-scout-17b-16e-instruct",
+      model: "groq/meta-llama/llama-4-scout-17b-16e-instruct",
       maxRetries: 1,
     },
   ],

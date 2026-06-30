@@ -8,7 +8,7 @@ const agent = new Agent({
   id: "safe-agent",
   name: "Safe Agent",
   instructions: "あなたは親切なアシスタントです。",
-  model: "google/gemini-3-flash-preview",
+  model: "google/gemini-3.5-flash",
   inputProcessors: [
     // 入力の正規化やインジェクション対策など
   ],

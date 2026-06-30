@@ -1,4 +1,4 @@
-// 第5章 5.3 チャンク戦略 - 原稿 L361-389
+// 第5章 5.4 ドキュメントのチャンク化と保存
 // インデックス作成 + メタデータ付与のサンプル
 import { mastra } from "./02-mastra-init.js";
 
@@ -10,14 +10,14 @@ declare const chunks: Array<{
 declare const embeddings: number[][];
 
 async function setupIndexAndUpsert() {
-  // 原稿 L361-367: インデックスの作成
+  // インデックスの作成
   const vectorStore = mastra.getVector("libSqlVector");
   await vectorStore.createIndex({
     indexName: "company_docs",
     dimension: 3072,
   });
 
-  // 原稿 L378-389: メタデータの付与
+  // メタデータの付与
   await vectorStore.upsert({
     indexName: "company_docs",
     vectors: embeddings,

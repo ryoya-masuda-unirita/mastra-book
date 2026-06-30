@@ -14,8 +14,8 @@ const agent = new Agent({
   model: ({ requestContext }) => {
     const tier = requestContext.get("user-tier");
     return tier === "enterprise"
-      ? "google/gemini-3-flash-preview"
-      : "google/gemini-3-flash-lite";
+      ? "google/gemini-3.5-flash"
+      : "google/gemini-3.1-flash-lite";
   },
 });
 

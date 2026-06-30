@@ -6,13 +6,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mastra/core": "*",
-    "@mastra/memory": "*",
-    "@mastra/libsql": "*",
-    "@mastra/client-js": "*"
+    "@mastra/core": "^1.41.0",
+    "@mastra/memory": "^1.20.2",
+    "@mastra/libsql": "^1.12.1",
+    "@mastra/client-js": "^1.23.2"
   },
   "devDependencies": {
-    "typescript": "*",
-    "@types/node": "*"
+    "typescript": "^6.0.3",
+    "@types/node": "^24.13.1"
   }
 }

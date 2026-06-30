@@ -3,11 +3,13 @@ import { Mastra } from "@mastra/core";
 import { Agent } from "@mastra/core/agent";
 import { createAzure } from "@ai-sdk/azure";
 
+// Azure OpenAIのモデルプロバイダーを作成
 const azure = createAzure({
   resourceName: process.env.AZURE_OPENAI_RESOURCE_NAME!,
   apiKey: process.env.AZURE_API_KEY!,
 });
 
+// エージェントを定義
 const testAgent = new Agent({
   id: "test-agent",
   name: "Test Agent",
@@ -15,6 +17,7 @@ const testAgent = new Agent({
   model: azure("gpt-5-4"), // Azure OpenAIのデプロイ名
 });
 
+// Mastraインスタンスを作成
 export const mastra = new Mastra({
   agents: { testAgent },
 });
