@@ -22,17 +22,22 @@ const documents = [
   },
 ];
 
+// 06-mastra-with-agent.ts で登録したベクトルストアを取得
 const vectorStore = mastra.getVector("libSqlVector");
 
+// インデックスを作成（既に存在する場合はスキップされる想定）
 await vectorStore.createIndex({
   indexName: "company_docs",
   dimension: 3072,
 });
 
+// ドキュメントごとに「読み込み→チャンク化→埋め込み→保存」を行う
 for (const { filePath, sourceName } of documents) {
+  // 1. Markdownファイルを読み込む
   const text = fs.readFileSync(filePath, "utf-8");
   const doc = MDocument.fromMarkdown(text);
 
+  // 2. 見出し（# タイトル、## セクション）単位でチャンクに分割する
   const chunks = await doc.chunk({
     strategy: "markdown",
     headers: [
@@ -43,6 +48,8 @@ for (const { filePath, sourceName } of documents) {
 
   console.log(`${sourceName}: ${chunks.length}チャンク`);
 
+  // 3. 各チャンクのテキストを埋め込みベクトルに変換する
+  //    検索時と同じ埋め込みモデルを使う必要がある
   const { embeddings } = await embedMany({
     model: new ModelRouterEmbeddingModel(
       "google/gemini-embedding-001",
@@ -50,6 +57,7 @@ for (const { filePath, sourceName } of documents) {
     values: chunks.map((chunk) => chunk.text),
   });
 
+  // 4. 埋め込みベクトルとメタデータ（元テキスト・出典・セクション名など）をまとめて保存する
   await vectorStore.upsert({
     indexName: "company_docs",
     vectors: embeddings,

@@ -10,8 +10,11 @@ declare const chunks: Array<{
 declare const embeddings: number[][];
 
 async function setupIndexAndUpsert() {
-  // インデックスの作成
+  // 02-mastra-init.ts で登録したベクトルストアを取得
   const vectorStore = mastra.getVector("libSqlVector");
+
+  // インデックスの作成
+  // dimension: 埋め込みベクトルの次元数。使用する埋め込みモデル（gemini-embedding-001）の出力次元に合わせる
   await vectorStore.createIndex({
     indexName: "company_docs",
     dimension: 3072,

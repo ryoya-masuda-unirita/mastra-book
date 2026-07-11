@@ -8,10 +8,13 @@ declare const newChunks: Array<{
   metadata?: { section?: string; title?: string };
 }>;
 
+// company_faq.md が更新された場合の再インデックス処理
+// 「古いチャンクを削除してから新しいチャンクを挿入する」流れで、重複や古い情報の混入を防ぐ
 async function reindexCompanyFaq() {
   const vectorStore = mastra.getVector("libSqlVector");
 
-  // 特定ドキュメントの古いチャンクを削除
+  // 特定ドキュメント（source: "company_faq"）に紐づく古いチャンクだけを削除
+  // メタデータでフィルタすることで、他のドキュメントのデータには影響を与えない
   await vectorStore.deleteVectors({
     indexName: "company_docs",
     filter: { source: "company_faq" },
